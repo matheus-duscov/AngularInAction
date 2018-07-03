@@ -1,0 +1,10 @@
+<app-navbar (onRefresh)="generateData()"></app-navbar>
+<ng-template #alertBox></ng-template>
+<app-dashboard (onRefresh)="alert($event)"></app-dashboard>
+
+
+<!-- NOTA
+This (#dashboard) denotes a local template variable, accessible as the variable dashboard, that references the Dashboard component 
+controller so we can call methods from the Dashboard component—it allows us to call a method from the Dashboard component anywhere 
+in the App component template, even though we aren’t inside the Dashboard component. But only public methods are available!
+-->
